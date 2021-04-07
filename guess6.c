@@ -29,7 +29,7 @@ main(const int argc, const char * argv[])
   int answer; // the secret number to guess
   int guess;  // the user's guess
   int max;    // we'll pick a number in [1..max]
-  int numGuesses = 1; // Current number of guesses so far
+  int numGuesses = 0; // Current number of guesses so far
   
   // interpret arguments
   if (argc == 1) {
@@ -62,7 +62,7 @@ main(const int argc, const char * argv[])
     }
     guess = askGuess(1, max);
     numGuesses++;
-    if (numGuesses == 10) {
+    if (numGuesses == 9) {
       printf("The answer was %d\n", answer);
       return 0;
     }
